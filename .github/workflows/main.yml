@@ -10,6 +10,4 @@ jobs:
     steps:
       - name: Force Wake Up
         run: |
-          curl -s -L -k --max-time 30 --retry 5 \
-          -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
-          "https://gold.magmanode.com/server?id=985993"
+          curl -I "https://gold.magmanode.com/server?id=985993"
