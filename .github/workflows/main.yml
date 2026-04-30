@@ -1,14 +1,17 @@
-name: Server-Renew-Bot
+name: Server-Ultimate-Protection
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '*/20 * * * *'
   workflow_dispatch:
 
 jobs:
   renew:
     runs-on: ubuntu-latest
     steps:
-      - name: Send Renew Request
-        run: curl -s "propvps.funserver.top"
-  
-        
+      - name: Force Wake Up and Renew
+        run: |
+          curl -s -L --max-time 30 --retry 3 "https://propvps.funserver.top" \
+          -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"
+          
+          curl -s -L --max-time 30 --retry 3 "https://propvps.funserver.top/start" \
+          -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"
