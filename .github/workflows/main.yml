@@ -1,0 +1,13 @@
+name: Server-Renew-Bot
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  renew:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Renew Request
+        run: curl -s "YOUR_MAGMANODES_CONSOLE_URL_HERE"
+        
