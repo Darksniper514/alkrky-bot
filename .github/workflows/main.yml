@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Send Renew Request
-        run: curl -s "YOUR_MAGMANODES_CONSOLE_URL_HERE"
+        run: curl -s "propvps.funserver.top"
+  
         
