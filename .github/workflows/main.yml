@@ -10,8 +10,5 @@ jobs:
     steps:
       - name: Force Wake Up and Renew
         run: |
-          curl -s -L --max-time 30 --retry 3 "https://propvps.funserver.top" \
-          -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"
-          
-          curl -s -L --max-time 30 --retry 3 "https://propvps.funserver.top/start" \
+          curl -s -L --max-time 30 --retry 3 "https://gold.magmanode.com/server?id=985993" \
           -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0"
